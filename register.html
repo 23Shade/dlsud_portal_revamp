@@ -1,11 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <title>Registration Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: url(res/reg.png) no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 300px;
+      height: 300px;
+      border-radius: 20px;
+      opacity: 0.8;
+      margin: 100px auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+
+    .textbox {
+      width: 200px;
+      padding: 10px;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+      width: 200px;
+    }
+
+    .button {
+      flex-basis: 45%;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      background-color: #1fff79;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .button.white {
+      background-color: white;
+      color: black;
+    }
+
+    .button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .button.glow:hover {
+      box-shadow: 0 0 10px rgba(0, 255, 0, 0.5), 0 0 20px rgba(0, 255, 0, 0.3), 0 0 30px rgba(0, 255, 0, 0.1);
+    }
+  </style>
 </head>
 <body>
-    
+  <div class="container">
+    <h2>Registration</h2>
+    <input type="text" placeholder="Username" class="textbox" id="username">
+    <input type="email" placeholder="Email" class="textbox" id="email">
+    <input type="password" placeholder="Password" class="textbox" id="password">
+    <input type="password" placeholder="Confirm Password" class="textbox" id="confirm-password">
+    <div class="button-container">
+      <button class="button" onclick="register()">Register</button>
+      <div style="width: 10px;"></div> <!-- Gap between buttons -->
+      <button class="button white" onclick="login()">Login</button>
+    </div>
+  </div>
+
+  <script>
+    function register() {
+      var username = document.getElementById("username").value;
+      alert("Welcome, " + username + "! Registration Complete.");
+    }
+
+    function login() {
+      location.href = "landingPage.html";
+    }
+  </script>
 </body>
 </html>
