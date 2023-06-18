@@ -84,7 +84,15 @@
   <script>
     function register() {
       var username = document.getElementById("username").value;
-      alert("Welcome, " + username + "! Registration Complete.");
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+      var confirmPassword = document.getElementById("confirm-password").value;
+      
+      if (username === '' || email === '' || password === '' || confirmPassword === '') {
+        alert("Please fill in all fields.");
+      } else {
+        alert("Welcome, " + username + "! Registration Complete.");
+      }
     }
 
     function login() {
