@@ -13,17 +13,19 @@
 
     .container {
       width: 300px;
-      height: 300px;
       margin: 100px auto;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       color: white;
     }
 
+    h2 {
+      color: #1fff79; /* Green color */
+    }
+
     .textbox {
-      width: 200px;
+      width: 100%;
       padding: 10px;
       margin-bottom: 20px;
       box-sizing: border-box;
@@ -34,7 +36,7 @@
     .button-container {
       display: flex;
       justify-content: space-between;
-      width: 200px;
+      width: 100%;
     }
 
     .button {
@@ -67,13 +69,16 @@
 <body>
   <div class="container">
     <h2>Registration</h2>
+    <label for="username">Username:</label>
     <input type="text" placeholder="Username" class="textbox" id="username">
+    <label for="email">Email:</label>
     <input type="email" placeholder="Email" class="textbox" id="email">
+    <label for="password">Password:</label>
     <input type="password" placeholder="Password" class="textbox" id="password">
+    <label for="confirm-password">Confirm Password:</label>
     <input type="password" placeholder="Confirm Password" class="textbox" id="confirm-password">
     <div class="button-container">
       <button class="button" onclick="register()">Register</button>
-      <div style="width: 10px;"></div> <!-- Gap between buttons -->
       <button class="button white" onclick="login()">Login</button>
     </div>
   </div>
