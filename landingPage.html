@@ -7,28 +7,33 @@
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
+    }
+
+    .header {
       background: url(res/school.gif) no-repeat center center fixed;
       background-size: cover;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .container {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
       background-color: rgba(0, 0, 0, 0.5);
       padding: 50px;
       border-radius: 10px;
       color: white;
       text-align: left;
-      width: 480px; /* Adjust the width as desired */
+      max-width: 480px;
+      margin: 0 auto;
     }
 
     .logo {
       float: right;
       margin-top: -15px;
       margin-right: -15px;
-      max-width: 80px; /* Adjust the logo size as desired */
+      max-width: 80px;
     }
 
     .textbox {
@@ -105,31 +110,36 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="res/logo.png" alt="Logo" class="logo">
-    <h2 style="text-align: left;">
-      Login to my.DLSU-D
-      <span style="font-size: 16px; color: lightgrey;">Ver 6.0</span>
-    </h2>
-    <p style="text-align: left; color: lightgrey;">
-      Enter your username and password to log in:
-    </p>
-    <input type="text" placeholder="Username" class="textbox">
-    <input type="password" placeholder="Password" class="textbox">
-    <div class="button-container">
-      <button class="button" onclick="location.href='login.html'">Log In</button>
-      <button class="button register-button" onclick="location.href='register.html'">Register</button>
-    </div>
-    <p class="forgot-password">Forgot password?</p>
-    <div class="footer-links">
-      <p>
-        <span>FAQ</span>
-        <span class="green-dot"></span>
-        <span>Help</span>
-        <span class="green-dot"></span>
-        <span>Contact Us</span>
+  <div class="header">
+    <div class="container">
+      <img src="res/logo.png" alt="Logo" class="logo">
+      <h2 style="text-align: left;">
+        Login to my.DLSU-D
+        <span style="font-size: 16px; color: lightgrey;">Ver 6.0</span>
+      </h2>
+      <p style="text-align: left; color: lightgrey;">
+        Enter your username and password to log in:
       </p>
+      <input type="text" placeholder="Username" class="textbox">
+      <input type="password" placeholder="Password" class="textbox">
+      <div class="button-container">
+        <button class="button" onclick="location.href='login.html'">Log In</button>
+        <button class="button register-button" onclick="location.href='register.html'">Register</button>
+      </div>
+      <p class="forgot-password">Forgot password?</p>
+      <div class="footer-links">
+        <p>
+          <span>FAQ</span>
+          <span class="green-dot"></span>
+          <span>Help</span>
+          <span class="green-dot"></span>
+          <span>Contact Us</span>
+        </p>
+      </div>
     </div>
   </div>
+
+  <img src="res/baptist.png" alt="Logo" style="width: 100%; height: auto;">
+
 </body>
 </html>
