@@ -73,6 +73,14 @@
     .register-button {
       background-color: white;
       color: black;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none; /* Remove underline */
+      font-size: 13px; /* Adjust font size as needed */
+    }
+
+    .register-button:hover {
+      background-color: #d9d9d9;
     }
 
     .forgot-password,
@@ -147,12 +155,14 @@
       <p style="text-align: left; color: lightgrey;">
         Enter your username and password to log in:
       </p>
-      <input type="text" placeholder="Username" class="textbox">
-      <input type="password" placeholder="Password" class="textbox">
-      <div class="button-container">
-        <button class="button" onclick="location.href='portal.html'">Log In</button>
-        <button class="button register-button" onclick="location.href='register.html'">Register</button>
-      </div>
+      <form method="POST" action="login.php">
+        <input type="text" name="username" placeholder="Username" class="textbox">
+        <input type="password" name="password" placeholder="Password" class="textbox">
+        <div class="button-container">
+          <button type="submit" class="button">Log In</button>
+          <a href="register.html" class="button register-button">Register</a>
+        </div>
+      </form>
       <p class="forgot-password">Forgot password?</p>
       <div class="footer-links">
         <p>
