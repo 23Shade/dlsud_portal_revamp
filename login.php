@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     
     // Prepare SQL statement to prevent SQL injection
-    $sql = "SELECT * FROM albioscarillotbl WHERE username = ? AND password = ?";
+    $sql = "SELECT * FROM usertbl WHERE username = ? AND password = ?";
     $stmt = mysqli_prepare($conn, $sql);
     mysqli_stmt_bind_param($stmt, "ss", $username, $password);
     mysqli_stmt_execute($stmt);
